@@ -130,7 +130,7 @@ img::-moz-selection {
     background: transparent;
   }
   #mainNav .navbar-brand {
-    padding: 10px 20px;
+    padding: 18px 20px;
     color: #fff;
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -437,3 +437,19 @@ footer .copyright {
   font-size: 16px;
   padding: 25px 35px;
 }
+
+.pannaiLogo {
+    background: url("/assets/Original_png.png") no-repeat;
+    float: left;
+    margin-top: 8px;
+    width: 270px;
+    height: 30px;
+    background-position: 0 0;
+    text-indent: -9999px;
+}
+
+.logo { background: url("/path") no-repeat; 
+width: 100px;
+ height: 100px; 
+ display: block; 
+ text-indent: -9999px;}
