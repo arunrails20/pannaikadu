@@ -1,0 +1,42 @@
+<%= form_for [refinery, :inquiries, inquiry] do |f| %>
+  <%= render :partial => "/refinery/admin/error_messages",
+             :locals => {
+               :object => inquiry,
+               :include_object_name => true
+             } %>
+  <div class="control-group">
+    <div class="field form-group floating-label-form-group controls">
+      <%= f.label :name, :class => 'placeholder-fallback required' %>
+      <%= f.text_field :name, :class => 'form-control text', :required => 'required',
+        :placeholder => (t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="field form-group floating-label-form-group controls">
+    <%= f.label :email, :class => 'placeholder-fallback required' %>
+    <%= f.email_field :email, :class => 'form-control text email', :required => 'required',
+      :placeholder => (t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+    </div>
+  </div>
+
+  <% if Refinery::Inquiries.show_phone_number_field %>
+    <div class="control-group">
+    <div class="field form-group floating-label-form-group controls">
+      <%= f.label :phone, :class => 'placeholder-fallback' %>
+      <%= f.text_field :phone, :class => 'form-control text phone',
+        :placeholder => (t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+    </div>
+    </div>
+  <% end %>
+  <div class="control-group">
+  <div class='field message_field form-group floating-label-form-group controls'>
+    <%= f.label :message, :class => 'placeholder-fallback required' %>
+    <%= f.text_area :message, :rows => 8, :required => 'required',
+      :placeholder => (t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+  </div>
+  </div>
+  <div class="actions form-group">
+    <%= f.submit t('.send'),:class => "btn btn-primary" %>
+    <%#= link_to t('.privacy_policy'), "/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
+  </div>
+<% end %>

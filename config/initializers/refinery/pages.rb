@@ -43,7 +43,7 @@ Refinery::Pages.configure do |config|
   # Set this to true to activate full-page-cache.
   # If you use Rails 4.0+ and set config.cache_pages_full to true, you have to add this gem in your Gemfile:
   # gem 'actionpack-page_caching'
-  # config.cache_pages_full = false
+  config.cache_pages_full = true
 
   # Set this to true to fully expand the page hierarchy in the admin
   # config.auto_expand_admin_tree = true
