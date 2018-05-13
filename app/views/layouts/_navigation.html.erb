@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-      <% Refinery::Page.where(parent_id: nil).where.not(slug: "home").each do |page| %>
+      <% Refinery::Page.where(parent_id: nil).where.not(slug: ["lower-hills","upper-hills"]).each do |page| %>
         <li class="nav-item">
           <%= link_to page.slug, page.slug, :class => "nav-link" %>
         </li>

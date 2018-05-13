@@ -42,6 +42,7 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 gem 'refinerycms-acts-as-indexed', '~> 3.0.0'
 gem 'refinerycms-wymeditor'
 gem "font-awesome-rails"
+gem "weather-api"
 
 gem 'rails_12factor', group: :production
 

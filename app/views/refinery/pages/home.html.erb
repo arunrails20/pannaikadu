@@ -1,2 +1,19 @@
 <%#= render '/refinery/content_page' %>
+<header class="masthead" style="background-image: url('/assets/IMG-20140723-WA0004.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1><%= greet%></h1> 
+          <span class="subheading">          <i class="wi wi-night-sleet"></i>
+ Pannaikadu | A Window for Kodaikanal Breeze</span>
+          <span class="subheading"> <%= weather[0]%> </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
 <%= raw @page.content_for(:body) %>
